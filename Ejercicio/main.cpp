@@ -76,8 +76,8 @@ void load_script()
     cout << "Archivo: ";
     // Lee el nombre del archivo
     cin >> filename;
-    load_script(filename, true);
-    // Limpia el buffer de entrada
+    load_script(filename, true);// Carga el archivo y muestra su contenido
+
 }
 
 int main()
