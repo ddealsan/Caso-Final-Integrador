@@ -25,7 +25,7 @@ void load_script(const char* filename, bool show_script = false)
     string script;
     ifstream file;
 
-    try
+    try// Manejo de excepciones
     {
         // Intenta abrir el archivo
         file.open(filename);
