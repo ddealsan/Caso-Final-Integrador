@@ -36,3 +36,32 @@ void load_script(const char* filename, bool show_script = false)
         script.assign((istreambuf_iterator<char>(file)), (istreambuf_iterator<char>()));
 
         file.close();
+        if (show_script)
+        {
+            cout << ColorConsole::fg_blue << ColorConsole::bg_white;
+            cout << script << endl;
+        }
+
+        consoleBox->new_text();
+        consoleBox->set_text(script);
+    }
+    catch (const ifstream::failure &e)
+    {
+        cerr << "Error durante la lectura del archivo: " << e.what() << endl;
+        if (file.is_open())
+            file.close();
+    }
+    catch (const exception &e)
+    {
+        cerr << "Excepción general: " << e.what() << endl;
+        if (file.is_open())
+            file.close();
+    }
+    catch (...)
+    {
+        cerr << "Error desconocido durante la lectura del archivo" << endl;
+        if (file.is_open())
+            file.close();
+    }
+}
+
