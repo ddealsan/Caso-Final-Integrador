@@ -65,3 +65,12 @@ void load_script(const char* filename, bool show_script = false)
     }
 }
 
+void load_script()
+{
+    char filename[500];
+    cout << "Archivo: ";
+    cin >> filename;
+    load_script(filename, true);
+}
+
+
