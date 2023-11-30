@@ -73,4 +73,9 @@ void load_script()
     load_script(filename, true);
 }
 
+int main()
+{
+    load_script();
+    return 0;
+}
 
