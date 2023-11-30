@@ -19,7 +19,7 @@ struct ConsoleBox
 
 ConsoleBox *consoleBox = new ConsoleBox;
 
-// Función para cargar y mostrar el contenido de un archivow
+// Función para cargar y mostrar el contenido de un archivo
 void load_script(const char* filename, bool show_script = false)
 {
     string script;
